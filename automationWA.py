@@ -8,14 +8,13 @@ fhandle = open('allstars.txt')  #
 data = fhandle.read()
 lines = data.split('\n')
 i = 0
-
+search = driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
+search.send_keys('Contact Name')  # Enter the name of a contact on your phone
+time.sleep(1)
+name = driver.find_element_by_class_name('_2kHpK')
+name.click()
+time.sleep(1)
 for line in lines:
-    search = driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
-    search.send_keys('Contact Name')  # Enter the name of a contact on your phone
-    time.sleep(1)
-    name = driver.find_element_by_class_name('_2kHpK')
-    name.click()
-    time.sleep(1)
     while True:
         msg = driver.find_element_by_class_name('_3uMse')
         msg.send_keys(lines[i])
