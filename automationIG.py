@@ -10,32 +10,28 @@ lines = data.split('\n')
 i = 0
 chat = driver.find_element_by_class_name('xWeGp')
 chat.click()
-find = driver.find_element_by_class_name('sqdOP  L3NKy   y3zKF     ')
+time.sleep(10)
+find = driver.find_element_by_class_name('QBdPU')
 find.click()
+time.sleep(3)
 search = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div/div[2]/input')
-search.send_keys('Meghna')
-name = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[2]/div[1]')
+search.send_keys('abhijith kp')
+time.sleep(3)
+name = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[2]/div[1]/div')
 name.click()
-select = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[1]/div/div[2]/div/button')
+time.sleep(3)
+select = driver.find_element_by_class_name('rIacr')
 select.click()
+time.sleep(3)
 for line in lines:
-    msg = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div['
-                                       '2]/div/div/div[2]/textarea')
-    msg.send_keys(lines[i])
-    time.sleep(5)
-    send = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div['
-                                        '2]/div/div/div[3]/button')
-    # search = driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
-    # search.send_keys('')
-    # time.sleep(1)
-    # name = driver.find_element_by_class_name('_2kHpK')
-    # name.click()
-    # time.sleep(1)
-    # while True:
-    #     msg = driver.find_element_by_class_name('_3uMse')
-    #     msg.send_keys(lines[i])
-    #     time.sleep(5)
-    #     button = driver.find_element_by_class_name('_1U1xa')
-    #     button.click()
-    i = i + 1
-    print(i)
+    while True:
+        msg = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div['
+                                           '2]/div/div/div[2]/textarea')
+        time.sleep(3)
+        msg.send_keys(lines[i])
+        time.sleep(5)
+        send = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div['
+                                            '2]/div/div/div[3]/button')
+        send.click()
+        i = i + 1
+        print(i)
