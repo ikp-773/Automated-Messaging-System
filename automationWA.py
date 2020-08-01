@@ -3,7 +3,7 @@ import time
 
 driver = webdriver.Chrome('./chromedriver')
 driver.get('https://web.whatsapp.com')
-input('Press anything to start.  ')
+input('Press anything to start after connecting with WhatsApp web.  ')
 fhandle = open('allstars.txt')  #
 data = fhandle.read()
 lines = data.split('\n')
