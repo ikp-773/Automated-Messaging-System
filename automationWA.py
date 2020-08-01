@@ -10,7 +10,6 @@ lines = data.split('\n')
 i = 0
 
 for line in lines:
-    namemsg = line.split('\n')
     search = driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
     search.send_keys('Contact Name')
     time.sleep(1)
