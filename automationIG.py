@@ -4,7 +4,7 @@ import time
 driver = webdriver.Chrome('./chromedriver')
 driver.get('https://www.instagram.com')
 input('Press anything to start after login. ')
-fhandle = open('allstars.txt')
+fhandle = open('allstars.txt')  # You can add another text file here
 data = fhandle.read()
 lines = data.split('\n')
 i = 0
