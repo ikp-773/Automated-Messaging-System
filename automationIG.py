@@ -4,7 +4,7 @@ import time
 driver = webdriver.Chrome('./chromedriver')
 driver.get('https://www.instagram.com')
 input('Press anything to start after login. ')
-fhandle = open('allstars.txt')  # You can add another text file here
+fhandle = open('me.txt')  # You can add another text file here
 data = fhandle.read()
 lines = data.split('\n')
 i = 0
@@ -15,7 +15,7 @@ find = driver.find_element_by_class_name('QBdPU')
 find.click()
 time.sleep(3)
 search = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div/div[2]/input')
-search.send_keys('abhijith kp')  # Enter the name of the ig account you want to send message
+search.send_keys('iabhirami')  # Enter the name of the ig account you want to send message
 time.sleep(3)
 name = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[2]/div[1]/div')
 name.click()
